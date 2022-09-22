@@ -657,4 +657,42 @@ alphabeticalOrder(["a", "d", "c", "a", "z", "g"])
 // Use the sort method in the nonMutatingSort function to sort the elements of an array in ascending order.
 // The function should return a new array, and not mutate the globalArray variable.
 
+const globalArray = [5, 6, 3, 2, 9];
+
+function nonMutatingSort(arr) {
+return [...arr].sort(function (a, b) {
+  return a - b
+})
+}
+
+nonMutatingSort(globalArray);
+
+
+// 19.
+// Use the split method inside the splitify function to split str into an array of words.
+// The function should return the array.
+// Note that the words are not always separated by spaces, and the array should not contain punctuation.
+
+function splitify(str) {
+  return str
+  .split(",")
+  .join(" ")
+  .split("-")
+  .join(" ")
+  .split(".")
+  .join(" ")
+  .split(" ")
+}
+
+splitify("Hello World,I-am code")
+
+
+// 20.
+// Use the join method (among others) inside the sentensify function
+// to make a sentence from the words in the string str.
+// The function should return a string.
+// For example, I-like-Star-Wars would be converted to I like Star Wars.
+// For this challenge, do not use the replace method.
+
+
 
