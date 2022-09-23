@@ -694,5 +694,61 @@ splitify("Hello World,I-am code")
 // For example, I-like-Star-Wars would be converted to I like Star Wars.
 // For this challenge, do not use the replace method.
 
+function sentensify(str) {
+ return str
+  .split(",")
+  .join(" ")
+  .split("-")
+  .join(" ")
+  .split(".")
+  .join(" ")
+}
+
+sentensify("May-the-force-be-with-you")
+
+// 21.
+// Fill in the urlSlug function so it converts a string title and returns the hyphenated version for the URL. You can use any of the methods covered in this section, and don't use replace.
+
+function urlSlug(title) {
+  let arr = title.split(" ")
+  let arrFilter = arr.filter(i => i)
+  .join("-")
+  .toLowerCase()
+
+return arrFilter 
+}
+urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone")
+
+
+// 22.
+// Use the every method inside the checkPositive function to check if every element in arr is positive.
+// The function should return a Boolean value.
+
+function checkPositive(arr) {
+
+return arr.every(function(currentValue) {
+  return currentValue > 0;
+})
+}
+
+checkPositive([1, 2, 3, -4, 5]);
+
+
+// 23.
+// Use the some method inside the checkPositive function to check if any element in arr is positive.
+// The function should return a Boolean value.
+
+function checkPositive(arr) {
+return arr.some(function(currentValue) {
+  return currentValue > 0;
+})
+}
+
+checkPositive([1, 2, 3, -4, 5])
+
+
+// 24.
+// Fill in the body of the add function so it uses currying to add parameters x, y, and z.
+
 
 
